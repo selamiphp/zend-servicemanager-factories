@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace SelamiApp\Factories;
+namespace Selami\Factories;
 
 use Zend\ServiceManager\Factory\FactoryInterface;
 use Interop\Container\ContainerInterface;
