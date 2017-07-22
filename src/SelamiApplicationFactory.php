@@ -12,6 +12,6 @@ class SelamiApplicationFactory implements FactoryInterface
 {
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
-        return new App($container->get('config'), $container->get(Router::class), $container);
+        return new App($container->get('config')['app'], $container->get(Router::class), $container);
     }
 }
