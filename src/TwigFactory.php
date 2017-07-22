@@ -14,6 +14,7 @@ class TwigFactory implements FactoryInterface
     {
         $config = $container->get('config');
         $globals = $container->get('globals');
+        $config['view']['templates_path'] = $config['app']['templates_path'];
         $loader = new Twig_Loader_Filesystem($config['view']['templates_path']);
         $twig = new Twig_Environment($loader, $config['view']['twig']);
         $twig->addGlobal('lang', $globals['runtime_lang']);
