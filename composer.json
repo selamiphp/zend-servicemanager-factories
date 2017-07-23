@@ -8,7 +8,11 @@
         "symfony/http-foundation": "^3.3",
         "zendframework/zend-diactoros": "^1.4",
         "selami/router": "^0.6",
-        "selami/foundation": "^0.9"
+        "selami/foundation": "^0.9",
+        "doctrine/dbal": "^2.6",
+        "mongodb/mongodb": "^1.1",
+        "soupmix/mongodb": "^0.8",
+        "soupmix/sql": "^0.8"
 
     },
     "license": "MIT",
