@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Session\Session;
 
 class SymfonySessionFactory implements FactoryInterface
 {
-    public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
+    public function __invoke(ContainerInterface $container, $requestedName, array $options = null) : Session
     {
         ini_set('session.use_cookies', '1');
         ini_set('session.use_only_cookies', '1');

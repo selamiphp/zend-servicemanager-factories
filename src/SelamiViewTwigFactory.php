@@ -8,10 +8,11 @@ use Interop\Container\ContainerInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Twig_Environment;
 use Selami\View\Twig\Twig as SelamiTwig;
+use Selami\View\ViewInterface;
 
 class SelamiViewTwigFactory implements FactoryInterface
 {
-    public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
+    public function __invoke(ContainerInterface $container, $requestedName, array $options = null) : ViewInterface
     {
         $config = $container->get('config');
         $request = $container->get(ServerRequestInterface::class);

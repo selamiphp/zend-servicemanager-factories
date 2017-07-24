@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Session\Session;
 
 class SymfonySessionMemcachedFactory implements FactoryInterface
 {
-    public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
+    public function __invoke(ContainerInterface $container, $requestedName, array $options = null) : Session
     {
         ini_set('session.handler', 'memcached');
         ini_set('session.save_path', 'localhost:11211');

@@ -13,7 +13,8 @@
         "mongodb/mongodb": "^1.1",
         "soupmix/mongodb": "^0.8",
         "soupmix/sql": "^0.8",
-        "soupmix/cache-memcached": "^0.3"
+        "soupmix/cache-memcached": "^0.3",
+        "soupmix/cache-redis": "^0.3.2"
 
     },
     "license": "MIT",
