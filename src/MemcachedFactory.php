@@ -12,7 +12,7 @@ class MemcachedFactory implements FactoryInterface
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null) : Memcached
     {
         $config = $container->get('config');
-        $memcachedClient = new Memcached ($config['memcached']['bucket']);
+        $memcachedClient = new Memcached ($config['memcached']['bucket'] ?? null);
         $memcachedClient->setOption(Memcached::OPT_LIBKETAMA_COMPATIBLE, true);
         $memcachedClient->setOption(Memcached::OPT_BINARY_PROTOCOL, true);
         $memcachedClient->addServers($config['memcached']['hosts']);

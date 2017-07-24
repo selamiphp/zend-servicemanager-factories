@@ -8,6 +8,7 @@ use Interop\Container\ContainerInterface;
 use Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage;
 use Symfony\Component\HttpFoundation\Session\Storage\Handler\MemcachedSessionHandler;
 use Symfony\Component\HttpFoundation\Session\Session;
+use Memcached;
 
 class SymfonySessionMemcachedFactory implements FactoryInterface
 {
