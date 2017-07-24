@@ -12,7 +12,8 @@
         "doctrine/dbal": "^2.6",
         "mongodb/mongodb": "^1.1",
         "soupmix/mongodb": "^0.8",
-        "soupmix/sql": "^0.8"
+        "soupmix/sql": "^0.8",
+        "soupmix/cache-memcached": "^0.3"
 
     },
     "license": "MIT",
