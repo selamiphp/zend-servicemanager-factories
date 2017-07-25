@@ -14,7 +14,8 @@
         "soupmix/mongodb": "^0.8",
         "soupmix/sql": "^0.8",
         "soupmix/cache-memcached": "^0.3",
-        "soupmix/cache-redis": "^0.3.2"
+        "soupmix/cache-redis": "^0.3.2",
+        "soupmix/elasticsearch": "^0.8"
 
     },
     "license": "MIT",
