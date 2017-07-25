@@ -15,7 +15,7 @@ class SoupmixSQLFactory implements FactoryInterface
     {
         $config = $container->get('config');
         return new SQL(
-            $config['mongodb']['soupmix'],
+            $config['doctrine']['soupmix'],
             $container->get(Connection::class)
         );
     }
