@@ -14,8 +14,8 @@ class MongoDBFactory implements FactoryInterface
         $config = $container->get('config');
         return new Client(
             $config['mongodb']['uri'],
-            $config['mongodb']['uriOptions'] ?? null,
-            $config['mongodb']['driverOptions'] ?? null
+            $config['mongodb']['uriOptions'] ?? [],
+            $config['mongodb']['driverOptions'] ?? []
         );
     }
 }
