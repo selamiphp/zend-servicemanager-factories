@@ -14,7 +14,7 @@ class SoupmixElasticSearchFactory implements FactoryInterface
     {
         $config = $container->get('config');
         return new SoupmixElasticsearch(
-            $config['elasticsearch']['soupmix']['index_name'],
+            $config['elasticsearch']['soupmix'],
             $container->get(Client::class)
         );
     }
