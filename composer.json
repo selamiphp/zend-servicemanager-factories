@@ -2,22 +2,7 @@
     "name": "selami/zend-servicemanager-factories",
     "description": "Predefined factories to used with Zend Service Manager and Selami",
     "type": "library",
-    "require-dev": {
-        "zendframework/zend-servicemanager": "^3.3",
-        "selami/views": "^0.4",
-        "symfony/http-foundation": "^3.3",
-        "zendframework/zend-diactoros": "^1.4",
-        "selami/router": "^0.6",
-        "selami/foundation": "^0.9",
-        "doctrine/dbal": "^2.6",
-        "mongodb/mongodb": "^1.1",
-        "soupmix/mongodb": "^0.8",
-        "soupmix/sql": "^0.8",
-        "soupmix/cache-memcached": "^0.3",
-        "soupmix/cache-redis": "^0.3.2",
-        "soupmix/elasticsearch": "^0.8"
 
-    },
     "license": "MIT",
     "authors": [
         {
