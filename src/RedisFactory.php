@@ -25,6 +25,7 @@ class RedisFactory implements FactoryInterface
         $connectionType = $this->config['redis']['connection'] ?? 'connect';
         $connectionType = in_array($connectionType, ['connect', 'pconnect'], true) ? $connectionType : 'connect';
         $this->{$connectionType}();
+        $this->auth();
         $this->setOptions();
         $this->selectDb();
         return $this->redisClient;
