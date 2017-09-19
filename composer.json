@@ -19,8 +19,8 @@
         "psr-4": {
             "Selami\\Factories\\": "src/"
         },
-        "file": [
-            "src/Adapters/Symfony/Component/HttpFoundation/Session/Storage/Handler/RedisSessionHandler"
+        "files": [
+            "src/Adapters/Symfony/Component/HttpFoundation/Session/Storage/Handler/RedisSessionHandler.php"
         ]
     }
 }
