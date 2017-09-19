@@ -8,7 +8,7 @@ use Interop\Container\ContainerInterface;
 use Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage;
 use Selami\Factories\Adapters\Symfony\Component\HttpFoundation\Session\Storage\Handler\RedisSessionHandler;
 use Symfony\Component\HttpFoundation\Session\Session;
-use Memcached;
+use Redis;
 
 class SymfonySessionRedisFactory implements FactoryInterface
 {

@@ -33,21 +33,29 @@ class RedisFactory implements FactoryInterface
 
     private function connect()
     {
-        $this->redisClient->connect(
+
+        $redisConfig = [
             $this->config['redis']['host'],
-            $this->config['redis']['port'] ?? null,
-            $this->config['redis']['timeout'] ?? null,
-            $this->config['redis']['reserved'] ?? null,
-            $this->config['redis']['retry_interval'] ?? null
-        );
+            $this->config['redis']['port'] ?? 6379,
+            $this->config['redis']['timeout'] ?? 0
+        ];
+
+        if (isset($this->config['redis']['retry_interval'])) {
+            $redisConfig[] = null;
+            $redisConfig[] = $this->config['redis']['retry_interval'];
+        } elseif (isset($this->config['redis']['reserved'])) {
+            $redisConfig[] = $this->config['redis']['reserved'];
+        }
+
+        $this->redisClient->connect(...$redisConfig);
     }
 
     private function pconnect()
     {
         $this->redisClient->pconnect(
             $this->config['redis']['host'],
-            $this->config['redis']['port'] ?? null,
-            $this->config['redis']['timeout'] ?? null,
+            $this->config['redis']['port'] ?? 6379,
+            $this->config['redis']['timeout'] ?? 0,
             $this->config['redis']['persistent_id'] ?? null
         );
     }
