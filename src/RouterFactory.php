@@ -31,8 +31,8 @@ class RouterFactory implements FactoryInterface
             $config['app']['default_return_type'] ?? Router::HTML,
             $request->getMethod(),
             $request->getUri()->getPath(),
-            '',
-            $config['app']['cache_file']
+            $config['app']['folder'] ?? '',
+            $config['app']['cache_file'] ?? ''
         );
         return $this->getRouter();
     }
