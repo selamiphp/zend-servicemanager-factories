@@ -32,7 +32,7 @@ class RouterFactory implements FactoryInterface
             $request->getMethod(),
             $request->getUri()->getPath(),
             $config['app']['folder'] ?? '',
-            $config['app']['cache_file'] ?? ''
+            $config['app']['cache_file'] ?? null
         );
         return $this->getRouter();
     }
