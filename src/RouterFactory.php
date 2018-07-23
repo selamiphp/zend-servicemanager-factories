@@ -27,10 +27,11 @@ class RouterFactory implements FactoryInterface
         $config = $container->get('config');
         $this->routes = $container->get('routes');
         $request = $container->get(ServerRequestInterface::class);
+        $requestedPath = $request->getUri()->getPath() !== '' ? $request->getUri()->getPath() : '/';
         $this->router = new Router(
             $config['app']['default_return_type'] ?? Router::HTML,
             $request->getMethod(),
-            $request->getUri()->getPath(),
+            $requestedPath,
             $config['app']['folder'] ?? '',
             $config['app']['cache_file'] ?? null
         );
