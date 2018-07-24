@@ -18,9 +18,11 @@ class SelamiViewTwigFactory implements FactoryInterface
         $request = $container->get(ServerRequestInterface::class);
         $viewConfig = $config['view'];
         $viewConfig['templates_path'] = $config['app']['templates_path'];
-        $viewConfig['runtime']['query_parameters'] =  self::getParams($request);
-        $viewConfig['runtime']['base_url'] =  $config['app']['base_url'];
-        $viewConfig['runtime']['config'] = $config;
+        $viewConfig['runtime']['QueryParameters'] =  self::getParams($request);
+        $viewConfig['runtime']['BaseUrl'] =  $config['app']['base_url'];
+        $viewConfig['runtime']['RuntimeConfig'] = $config;
+        $viewConfig['runtime']['Request'] = $request;
+
         $twig = $container->get(Twig_Environment::class);
         return new SelamiTwig($twig, $viewConfig);
     }
